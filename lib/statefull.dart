@@ -14,11 +14,20 @@ class _MyStatefulWidgetAppState extends State<MyStatefulWidgetApp> {
     });
   }
 
+  void decrementCounter() {
+    setState(() {
+      if (counter > 0) {
+        counter--;
+      }
+    });
+  }
+ 
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Stateful Counter App')),
+        appBar: AppBar(title: Text('Stateful Count  er App')),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -28,6 +37,10 @@ class _MyStatefulWidgetAppState extends State<MyStatefulWidgetApp> {
               ElevatedButton(
                 onPressed: incrementCounter,
                 child: Text('Increment'),
+              ),
+              SizedBox(height: 12,),
+              ElevatedButton(onPressed: decrementCounter,
+              child: Text('Decremenet'),
               ),
             ],
           ),
