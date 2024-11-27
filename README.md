@@ -1,16 +1,39 @@
-# state_management_codelab
+# Selamat datang di State Management saya, agar kode berjalan dengan baik pastikan anda sudah memiliki :
+Dart (bahasa pemrograman open-source yang dikembangkan oleh Google. Dart digunakan untuk mengembangkan aplikasi web, seluler, dan sisi server.)
+SDK Flutter (Untuk menjalankan Framework Dart yang bernama Flutter)
 
-A new Flutter project.
+# Penggunaan File Ini
 
-## Getting Started
+1. Memodifikasi File Main
+   Agar kode berjalan sesuai yang user inginkan anda bisa memilih antara ingin mencoba file stateless ataupun file stateful
+   dengan merubah
+     void main() {
+    runApp(MyStatefulWidgetApp());
 
-This project is a starting point for a Flutter application.
+- MyStatefulWidgetApp = untuk menjalankan file Stateful.
+- MyStatelessApp = untuk menjalankan kode stateless
 
-A few resources to get you started if this is your first Flutter project:
+2. Memodifikasi file pada test/widget_test.dart
+   Setelah memilih ingin mencoba MyStatefulWidgetApp atau MyStatelessApp, anda juga harus menyesuaikan file test sesuai dengan yang anda gunakan pada file main fucntion anda
+   void main() {
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(MyStatefulWidgetApp()); //Spesifik pada bagian ini
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+   Anda dapat menyesuaikan dengan tipe widget yang anda gunakan
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+# Mengenai Perbedaan Stateful dan Stateless
+
+## StatelessWidget
+Penjelasan : Widget ini bersifat statis, artinya tampilannya tidak berubah selama siklus hidup widget.'
+
+## StatefulWidget
+Penjelasan : Widget ini bersifat dinamis, artinya tampilannya dapat berubah selama siklus hidup aplikasi berdasarkan perubahan data atau interaksi pengguna.
+
+# Perbedaan Antara Kode Stateful dan Stateless
+
+Pada bagian StatefulWidget tampilan dapat berubah sesuai dengan interkasi user seperti perubahan angka pada saat tombol di click, sedangkan pada StatelessWidget tampilan tidak dapat di rubah (Atau biasa disebut dalam mode statis), Yang dimana User tidak dapat berinteraksi pada halaman yang Statis (Menjelaskan mengapa saat tombol di click angka tidak berubah sama skali)
+
+
+**Sekian Dan terima Kasih **
